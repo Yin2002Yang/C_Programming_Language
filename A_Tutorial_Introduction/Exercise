@@ -1,0 +1,3 @@
+Exercise 1-2:
+	 The Programs gives a warning about not knowing the escape sequence.
+	 But the program runs and treats it like a single character.
