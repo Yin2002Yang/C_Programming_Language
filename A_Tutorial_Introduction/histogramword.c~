@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+#define IN 1 /* Inside a word */
+#define OUT 0 /* Outside a word */
+#define MAX 10000 /* Maximum number of words allowed */
+
+/* A program to show histogram of length of words given as input */
+main()
+{
+  int c, state, length;
+  int words[MAX], count;
+
+  count = length = 0;
+  state = OUT;
+  while ((c = getchar()) != EOF)
+    {
+      if (c == ' ' || c == '\n' || c == '\t')
+	state = OUT;
+      else if (state == OUT)
+	{
+	  state = IN;
+	  printf(": %d\n", count);
+	  count = 0;
+	}
+      if (state == IN)
+	{
+	  ++count;
+	  putchar(c);
+	}
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
