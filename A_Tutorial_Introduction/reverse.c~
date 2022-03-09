@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include "utility.h"
+
+#define MAXLINE 1000 /* maximum length of line allowed */
+
+char[] reverse(char[]);
+
+int main()
+{
+  int len;
+  char line[];
+
+  while ((len = Getline(line, MAXLINE)) > 0)
+    printf("%s", reverse(line));
+
+  return 0;
+}
+
+char[] reverse(char line[])
+{
+  int len; /* how long the line is */
+  int i, j;
+
+  i = 0;
+  while (line[i] != '\0')
+    {
+      ++len;
+      ++i;
+    }
+
+  char reverse[len+1];
+  j = 0;
+  for (i = len; i >= 0; --i)
+    {
+      reverse[j] = line[i];
+      ++j;
+    }
+  reverse[j] = '\0';
+  return reverse;

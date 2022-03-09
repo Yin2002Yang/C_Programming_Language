@@ -1,0 +1,7 @@
+#ifndef UTILITY_DOT_H
+#define UTILITY_DOT_H
+
+int Getline(char line[], int maxline);
+void copy(char to[], char from[]);
+
+#endif
